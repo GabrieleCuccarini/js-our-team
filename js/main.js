@@ -1,9 +1,3 @@
-const member1El = document.querySelector(".member1")
-const member2El = document.querySelector(".member2")
-const member3El = document.querySelector(".member3")
-const member4El = document.querySelector(".member4")
-const member5El = document.querySelector(".member5")
-
 const peopleAndInfos = [
     {
         name: "Wayne Barnett",
@@ -31,14 +25,20 @@ const peopleAndInfos = [
         img: " barbara-ramos-graphic-designer.jpg"
     }
 ]
+const container = document.querySelector(".container")
 
-console.log(peopleAndInfos)
 for (let i = 0; i < peopleAndInfos.length; i++) {
     console.log(peopleAndInfos[i].name, peopleAndInfos[i].role, peopleAndInfos[i].img)
 }
 
-member1El.innerHTML = peopleAndInfos[0].name + " - " + peopleAndInfos[0].role + " - " + peopleAndInfos[0].img
-member2El.innerHTML = peopleAndInfos[1].name + " - " + peopleAndInfos[1].role + " - " + peopleAndInfos[1].img
-member3El.innerHTML = peopleAndInfos[2].name + " - " + peopleAndInfos[2].role + " - " + peopleAndInfos[2].img
-member4El.innerHTML = peopleAndInfos[3].name + " - " + peopleAndInfos[3].role + " - " + peopleAndInfos[3].img
-member5El.innerHTML = peopleAndInfos[4].name + " - " + peopleAndInfos[4].role + " - " + peopleAndInfos[4].img
+for (let i = 0; i < peopleAndInfos.length; i++) {
+    const nameEl = document.createElement("h2")
+    const roleEl = document.createElement("h4")
+    const imgEl = document.createElement("h4")
+    nameEl.innerHTML = peopleAndInfos[i].name
+    roleEl.innerHTML = peopleAndInfos[i].role
+    imgEl.innerHTML = peopleAndInfos[i].img
+    imgEl.classList.add("mb-5")
+    container.append(nameEl, roleEl, imgEl)
+}
+
