@@ -1,3 +1,7 @@
+const nameEl = document.querySelector(".name")
+const roleEl = document.querySelector(".role")
+const imgEl = document.querySelector(".img")
+
 const peopleAndInfos = [
     {
         name: "Wayne Barnett",
@@ -27,3 +31,10 @@ const peopleAndInfos = [
 ]
 
 console.log(peopleAndInfos)
+for (let i = 0; i < peopleAndInfos.length; i++) {
+    console.log(peopleAndInfos[i].name, peopleAndInfos[i].role, peopleAndInfos[i].img)
+}
+
+nameEl.innerHTML = peopleAndInfos[0].name
+roleEl.innerHTML = peopleAndInfos[0].role
+imgEl.innerHTML = peopleAndInfos[0].img
