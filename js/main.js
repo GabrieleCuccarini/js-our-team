@@ -25,20 +25,22 @@ const peopleAndInfos = [
         img: " barbara-ramos-graphic-designer.jpg"
     }
 ]
-const container = document.querySelector(".container")
+const container = document.querySelector(".container");
 
+// MILESTONE 1
 for (let i = 0; i < peopleAndInfos.length; i++) {
-    console.log(peopleAndInfos[i].name, peopleAndInfos[i].role, peopleAndInfos[i].img)
+    console.log(peopleAndInfos[i].name, peopleAndInfos[i].role, peopleAndInfos[i].img);
 }
 
+// MILESTONE 2
 for (let i = 0; i < peopleAndInfos.length; i++) {
-    const nameEl = document.createElement("h2")
-    const roleEl = document.createElement("h4")
-    const imgEl = document.createElement("h4")
-    nameEl.innerHTML = peopleAndInfos[i].name
-    roleEl.innerHTML = peopleAndInfos[i].role
-    imgEl.innerHTML = peopleAndInfos[i].img
-    imgEl.classList.add("mb-5")
-    container.append(nameEl, roleEl, imgEl)
+    const nameEl = document.createElement("h2");
+    const roleEl = document.createElement("h4");
+    const imgEl = document.createElement("h4");
+    nameEl.innerHTML = peopleAndInfos[i].name;
+    roleEl.innerHTML = peopleAndInfos[i].role;
+    imgEl.innerHTML = peopleAndInfos[i].img;
+    imgEl.classList.add("mb-5");
+    container.append(nameEl, roleEl, imgEl);
 }
 
