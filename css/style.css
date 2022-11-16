@@ -1,0 +1,7 @@
+.basis {
+    flex-basis: calc(100% / 5);
+}
+
+.width {
+    width: 100%;
+}

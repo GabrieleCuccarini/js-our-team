@@ -22,7 +22,7 @@ const peopleAndInfos = [
     {
         name: "Barbara Ramos",
         role: "Graphic Designer",	        
-        img: " barbara-ramos-graphic-designer.jpg"
+        img: "barbara-ramos-graphic-designer.jpg"
     }
 ]
 const container = document.querySelector(".container");
@@ -34,13 +34,17 @@ for (let i = 0; i < peopleAndInfos.length; i++) {
 
 // MILESTONE 2
 for (let i = 0; i < peopleAndInfos.length; i++) {
+    const cardContainer = document.createElement("div")
+    cardContainer.classList.add("basis")
     const nameEl = document.createElement("h2");
     const roleEl = document.createElement("h4");
-    const imgEl = document.createElement("h4");
+    const imgEl = document.createElement("img");
     nameEl.innerHTML = peopleAndInfos[i].name;
     roleEl.innerHTML = peopleAndInfos[i].role;
-    imgEl.innerHTML = peopleAndInfos[i].img;
+    imgEl.src = "./img/" + peopleAndInfos[i].img;
     imgEl.classList.add("mb-5");
-    container.append(nameEl, roleEl, imgEl);
+    imgEl.classList.add("width");
+    container.append( cardContainer );
+    cardContainer.append( nameEl, roleEl, imgEl );
 }
 
